@@ -13,9 +13,4 @@ class Dog
     def self.all
         DOGS
     end
-
-    
-
-    
-
 end
