@@ -1,19 +1,26 @@
-class Dog
+class Dog < ActiveRecord::Migration[5.2]
 
-    attr_accessor :name, :breed, :age
+    # attr_accessor :name, :breed, :age
 
-    @@all =[]
+    # @@all =[]
 
-    def initialize(name, breed, age)
-       @name, @breed, @age = name, breed, age
-       @@all
-    end
+    # def initialize(name, breed, age)
+    #    @name, @breed, @age = name, breed, age
+    #    @@all
+    # end
 
-    def self.all
-        @@all << self
+    # def self.all
+    #     @@all << self
+    # end
+
+    def change
+        create_table :dogs do |t|
+            t.string :name
+            t.string :breed
+            t.integer :age
+        end
     end
     
-
 
 
 end
